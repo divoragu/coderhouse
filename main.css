@@ -1,0 +1,337 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.div-prin{
+    background-image: linear-gradient(90deg, rgb(97, 97, 97), rgb(168, 168, 168), rgb(126, 125, 125));
+    display: grid;
+    /* 835px max */
+    grid-template-columns: auto auto 200px;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "article"
+    "section"
+    "aside"
+    "footer"
+    ;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/* media quieres */
+@media screen and (min-width: 768px) {
+    .div-prin{
+        
+        grid-template-areas:
+        "header header header"
+        "nav nav nav"
+        "main main aside"
+        "article section section"
+        "footer footer footer"
+        ;
+    } 
+    header{
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 80px;
+    }
+    .nav-menu ul li{
+        display: inline;
+        margin: 50px;
+    }
+
+}
+header, nav, main, article, section, aside, footer{
+    margin: 2px;
+}
+header{
+    grid-area: header;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    grid-area: nav;
+}
+main{
+    border: 2px solid red;
+    grid-area: main;
+    display: grid;
+
+    grid-template-areas: 
+    "artc artc"
+    "sect sect1"
+    ;
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+section{
+    grid-area: section;
+    padding: 20px;
+}
+aside{
+    border: 2px solid red;
+    grid-area: aside;
+}
+aside p{
+    display: inline-block;
+    font-size: 20px;
+    text-align: center; 
+    margin: 10px;   
+}
+aside div{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+aside h5{
+    font-size: 20px;
+    text-align: center;
+    margin: 10px;
+}
+footer{
+    grid-area: footer;
+}
+article{
+    grid-area:article;
+}
+.title{
+    display: inline;
+    padding: 2px;
+    text-align: center;
+    font-size: 35px;
+    border: 2px solid blueviolet;
+    border-radius: 20px;
+    background-color: rgb(180, 129, 228);
+}
+header div{  
+    padding: 20px;  
+    animation-name: girotitulo;
+    animation-timing-function: ease;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    /* animation-delay: .2s; */
+}
+@keyframes girotitulo{
+    0%{transform: skew(20deg);}
+    25%{transform: skew(25deg);}
+    50%{transform: skew(-20deg);}
+    75%{transform: skew(-25deg);}  
+}
+header img{
+    animation-name: img-scale;
+    animation-timing-function: ease;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes img-scale{
+    20%{transform: rotateX(50deg);}
+    40%{transform: rotateY(100deg);}
+    60%{transform: rotateZ(150deg);}
+    80%{transform: rotateX(200deg);}
+    100%{transform: rotateY(250deg);}
+}
+.nav-menu{
+    background-image: linear-gradient(lightgrey, grey, darkgrey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    font-size: 25px;
+}
+.nav-menu ul{
+    list-style-type: none;
+    padding: 20px;
+    display: inline;
+}
+.nav-menu ul li{
+    display: inline;
+    margin: 5px;
+}
+.nav-menu ul li a{
+    text-decoration: none;
+    padding: 5px;
+}
+.nav-menu ul li :visited{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+.nav-menu ul li:hover{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
+    transition-timing-function: ease;
+    transition-duration: 1s;
+    transform: scale(1.3);
+    padding: 10px;
+}
+.main-body h2{
+    display: block;
+    font-size: 30px;
+    text-align: center;
+    margin: 0px;
+    height: 75px;
+}
+.main-body p{
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    margin: 2px;
+    height: 60px;
+}
+.art-grid{
+    grid-area: artc;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 5px;
+}
+.sect-grid{
+    display: block;
+    margin-top: 50px;
+}
+.sect-grid h4{
+    font-size: 30px;
+    text-align: center;    
+}
+.sect-grid p{
+    font-size: 25px;
+}
+.sect-grid div{
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+}
+.sect-grid1{
+    display: block;
+    margin-top: 30px;
+}
+.sect-grid1 h5{
+    font-size: 30px;
+    text-align: center;    
+}
+.sect-grid1 p{
+    font-size: 25px;
+}
+.sect-grid1 div{
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+}
+.art-grid div h3{
+    display: block;
+    margin: 0px;
+    padding:10px;
+    font-size: 30px;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+}
+footer .nav-footer{
+    display: inline-flex;
+    align-items: center;
+    height: 40px;
+}
+footer .nav-footer li{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    list-style-type: none;
+}
+footer .nav-footer li a{
+    padding: 20px;
+    align-items: center;
+    text-decoration: none;
+}
+h6{
+    display: flex;
+    justify-content: start;
+    width: 400px;
+}
+
+/* about me */
+.div-prin1{
+
+    background-image: linear-gradient(90deg, rgb(97, 97, 97), rgb(168, 168, 168), rgb(126, 125, 125));
+    display: grid;
+    /* 835px max */
+    grid-template-columns: auto auto 200px;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "article"
+    "section"
+    "aside"
+    "footer"
+    ;    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+@media screen and (min-width: 768px) {
+    .div-prin1{
+        
+        grid-template-areas:
+        "header header header"
+        "nav nav nav"
+        "main main aside"
+        "article section section"
+        "footer footer footer"
+        ;
+    } 
+    header{
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 80px;
+    }
+    .main1{
+        display: inline;
+        text-align: center;
+        margin: 10px;
+    }
+    .nav-menu ul li{
+        display: inline;
+        margin: 30px;
+    }
+
+}
+.art-grid1 div{
+    
+
+}
+
+.art-grid1{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 5px;
+    font-size: 15px;
+}
+.sect-grid2 h3{
+    display: block;
+    margin-top: 50px;
+    font-size: 25px;
+    text-align: center;
+    margin: 20px;
+}
+.img-primera1{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 40px;
+}
+.img-primera2{
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
