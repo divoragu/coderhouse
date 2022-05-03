@@ -22,7 +22,7 @@
 /* media quieres */
 @media screen and (min-width: 768px) {
     .div-prin{
-        
+        background-color: gray;
         grid-template-areas:
         "header header header"
         "nav nav nav"
@@ -69,6 +69,17 @@ main{
     justify-content: center;
     align-items: center;
     padding: 20px;
+}
+.main1{
+    animation-name: main-rotate;
+    /* animation-iteration-count: infinite; */
+    animation-timing-function: ease;
+    animation-duration: 5s;
+}
+@keyframes main-rotate{
+    0%{transform: scale(.2);}
+    100%{transform: scale(1);}
+
 }
 section{
     grid-area: section;
