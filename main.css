@@ -3,7 +3,7 @@
     padding: 0px;
 }
 .div-prin{
-    background-image: linear-gradient(90deg, rgb(97, 97, 97), rgb(168, 168, 168), rgb(126, 125, 125));
+    background-image: linear-gradient( rgb(235, 230, 230), rgb(180, 180, 180), rgb(97, 96, 96));
     display: grid;
     /* 835px max */
     grid-template-columns: auto auto 200px;
@@ -258,8 +258,8 @@ h6{
 
 /* about me */
 .div-prin1{
+    background-image: linear-gradient( rgb(235, 230, 230), rgb(180, 180, 180), rgb(97, 96, 96));
 
-    background-image: linear-gradient(90deg, rgb(97, 97, 97), rgb(168, 168, 168), rgb(126, 125, 125));
     display: grid;
     /* 835px max */
     grid-template-columns: auto auto 200px;
@@ -297,18 +297,37 @@ h6{
         display: inline;
         text-align: center;
         margin: 10px;
+        background-color: rgb(169, 169, 255);
+        box-shadow: 7px 10px rgb(230, 108, 108);
+    }
+    .main1 h2{
+        margin-bottom: px;
+        border: 2px double rgb(106, 114, 236);
+        display: inline;
+    }
+    .main1 p{
+        margin: 20px;
+        font-weight: 600;
     }
     .nav-menu ul li{
         display: inline;
         margin: 30px;
     }
+    .art-grid1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
+        padding-left: 10px;
+        border: 2px solid lawngreen;
+    }
 
 }
-.art-grid1 div{
-    
-
+.main1{
+    display: inline;
+    text-align: center;
+    margin: 10px;
 }
-
 .art-grid1{
     display: block;
     justify-content: center;
