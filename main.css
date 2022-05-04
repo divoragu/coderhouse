@@ -415,3 +415,18 @@ button:hover{
     transform: scale(1.2);
 
 }
+/* help me */
+.helpme{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+.ask{
+    grid-area: ask;
+}
+.ask1{
+    grid-area: ask1;
+}
