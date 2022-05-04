@@ -425,8 +425,39 @@ button:hover{
     margin: 10px;
 }
 .ask{
-    grid-area: ask;
+    padding: 10px;
+    margin: 10px;
+    animation: rotate;
+    animation-duration: 5s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-delay: ;
 }
-.ask1{
-    grid-area: ask1;
+@keyframes rotate {
+    from{transform: rotateY(10deg);}
+    to{transform: rotateY(360deg);}
+}
+.art-hm{
+    padding: 10px;
+    margin: 10px
+}
+.sect-hm{
+    padding-top: 10px;
+    margin: 10px
+}
+.as-hm{
+    border: none;
+    animation: movida;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+@keyframes movida {
+    from{transform: rotateZ(10deg);}
+    to{transform: rotateZ(-6deg);}
+}
+/* Ubication */
+.info-maps{
+    padding: 10px;
+    margin: 10px;
 }
