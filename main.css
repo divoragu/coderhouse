@@ -6,7 +6,7 @@
     background-image: linear-gradient( rgb(235, 230, 230), rgb(180, 180, 180), rgb(97, 96, 96));
     display: grid;
     /* 835px max */
-    grid-template-columns: auto auto 200px;
+    grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto;
     grid-template-areas:
     "header"
@@ -377,15 +377,41 @@ h6{
     animation-iteration-count: infinite;
     animation-duration: s;
 }
-/* @keyframes img-primera {
-    0%{transform:skew(10deg);}
-    33%{transform: skew(-10deg);}
-    66%{transform: skew(10deg);}
-    99%{transform: skew(-10deg);}
-    
-} */
+
 .img-primera2{
     display: flex;
     justify-content: center;
     margin: 15px;
+}
+
+/* Contact */
+
+form{
+    /* grid-area: form; */
+    display: flex;
+    flex-direction: column;
+    border: 1.2px solid rgb(80, 80, 250);
+    border-radius: 10px;
+    padding: 10px;
+}
+textarea{
+    resize: none;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    height: 47px;
+    box-sizing: border-box;
+}
+button{
+    margin: 10px;
+    box-shadow: 2px 3px;
+}
+button:focus{
+    border-color: blue;
+}
+button:hover{
+    background-color: bisque;
+    transform: scale(1.2);
+
 }
